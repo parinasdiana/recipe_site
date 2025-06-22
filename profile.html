@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Profile Settings</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body onload="loadProfile()">
+    <div class="auth-container">
+        <h2>Profile Settings</h2>
+        <p><strong>Username:</strong> <span id="profile-username"></span></p>
+
+        <hr>
+
+        <h3>Change Password</h3>
+        <input type="password" id="current-password" placeholder="Current Password" />
+        <input type="password" id="new-password" placeholder="New Password" />
+        <input type="password" id="confirm-password" placeholder="Confirm New Password" />
+        <button onclick="changePassword()">Update Password</button>
+
+        <hr>
+        <button onclick="logout()">Logout</button>
+        <p><a href="index.html">← Back to Home</a></p>
+    </div>
+    <script src="auth.js"></script>
+</body>
+
+</html>
