@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Recipe Share</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body onload="checkLogin()">
+    <header>
+        <h1><img src="recipeshare-logo.png">Recipe Share</h1>
+        <div id="user-info">
+            <span id="welcome-user"></span>
+            <button onclick="logout()">Logout</button>
+            <button><a href="change-password.html">Change Password</a></button>
+
+        </div>
+    </header>
+
+    <section id="recipe-form-section">
+        <h2>Submit a Recipe</h2>
+        <input type="text" id="recipe-title" placeholder="Recipe Title" required />
+        <textarea id="recipe-content" placeholder="Write your recipe..." required></textarea>
+        <button onclick="submitRecipe()">Post Recipe</button>
+    </section>
+
+    <section id="recipes">
+        <h2>All Recipes</h2>
+        <div id="recipe-list"></div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+
+</html>
