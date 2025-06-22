@@ -4,17 +4,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Merriweather", sans-serif;
+    font-family: "Merriweather", serif;
 }
 
 body {
-    background: #D3ECCD;
+    background: #FFF7F0;
     color: #333;
     padding: 20px;
+    min-height: 100vh;
 }
 
+/* ===== HEADER ===== */
 header {
-    background-color: #075B5E;
+    background-color: #FF8C94;
     color: white;
     padding: 20px;
     margin-bottom: 20px;
@@ -22,39 +24,69 @@ header {
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
-}
-img {
-    width: 50px;
-    margin-right: 20px;
-}
-span {
-    margin-right: 15px;
-    font-size: 25px;
+    flex-wrap: wrap;
 }
 
+header h1 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+img {
+    width: 40px;
+    margin-right: 15px;
+}
+
+span {
+    margin-right: 15px;
+    font-size: 1rem;
+}
+
+#user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* ===== BUTTONS&LINKS ===== */
 button {
-    padding: 5px;
+    padding: 8px 12px;
     background: white;
     border: none;
     color: black;
     border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
 }
 
 button:hover {
-    transition: 0.5s;
-    background: #2d9958;
+    background: #D05D64;
+    color: white;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
+}
+
+button a {
     color: black;
 }
 
+/* ===== FORM SECTION ===== */
 #recipe-form-section {
-    background: #9FC87E;
+    background: #FFE3E0;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#recipe-form-section h2 {
+    margin-bottom: 10px;
 }
 
 #recipe-form-section input,
@@ -64,20 +96,24 @@ a {
     margin: 10px 0;
     border: none;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
+/* ===== RECIPE SECTION ===== */
 #recipes {
-    background: #f1f8e9;
+    background: #FFF0E6;
     padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .recipe-card {
-    background: #ffffff;
-    border: 1px solid #ccc;
+    background: #FFF8F5;
+    border: 1px solid #f2ccc2;
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .recipe-card .title {
@@ -91,28 +127,36 @@ a {
     margin-bottom: 10px;
 }
 
+/* ===== RECIPE ACTIONS ===== */
 .actions {
     margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .actions button {
-    padding: 50px;
-    margin-right: 10px;
+    padding: 8px 14px;
+    font-size: 0.9rem;
 }
 
+/* ===== COMMENT SECTION ===== */
 .comment-section {
     margin-top: 10px;
 }
 
 .comment-section input {
     width: 70%;
-    padding: 5px;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
 }
 
+/* ===== AUTH PAGES ===== */
 .auth-container {
-    max-width: 500px;
+    max-width: 400px;
     margin: 80px auto;
-    background: #9FC87E;
+    background: #FFE3E0;
     padding: 30px;
     border-radius: 10px;
     text-align: center;
@@ -120,36 +164,33 @@ a {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.auth-container h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
 .auth-container input {
-    width: 95%;
-    padding: 15px;
+    width: 100%;
+    padding: 10px;
     margin: 20px 0;
     border: none;
     border-radius: 10px;
+    font-size: 1rem;
 }
 
 .auth-container button {
     padding: 10px 20px;
-    margin-top: 15px;
+    margin-top: 10px;
     border-radius: 10px;
     cursor: pointer;
 }
 
 .auth-container button:hover {
-    transition: 0.5s;
-    background: #075B5E;
+    background: #FF8C94;
+    color: white;
 }
 
 .auth-container p {
-    color: black;
     margin-top: 15px;
+    font-size: 0.95rem;
 }
 
 .auth-container p a {
     text-decoration: underline;
+    color: black;
 }
