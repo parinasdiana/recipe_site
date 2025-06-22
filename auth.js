@@ -81,3 +81,12 @@ function changePassword() {
     alert("Password changed successfully.");
     window.location.href = "index.html";
 }
+
+function loadProfile() {
+    const user = localStorage.getItem("loggedInUser");
+    if (!user) {
+        window.location.href = "login.html";
+        return;
+    }
+    document.getElementById("profile-username").textContent = user;
+}
